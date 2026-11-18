@@ -1,0 +1,4 @@
+name = "project-check"
+type = "tool"
+target = "project.toml manifests"
+visibility = "public"
