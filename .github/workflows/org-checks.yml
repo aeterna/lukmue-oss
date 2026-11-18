@@ -1,0 +1,16 @@
+name: org-checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  org-checks:
+    uses: aeterna/.github/.github/workflows/org-checks.yml@df42d4396ebf3e33467452e059e9313b8f1ff598
+    with:
+      public: true
+      claude-md-max: 150

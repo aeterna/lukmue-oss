@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project manifest",
+  "type": "object",
+  "required": ["name", "type", "target", "visibility"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "type": {"type": "string", "enum": ["tool", "mod", "helper", "other"]},
+    "target": {"type": "string", "minLength": 1},
+    "visibility": {"type": "string", "enum": ["private", "public"]}
+  }
+}
